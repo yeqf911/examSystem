@@ -1,0 +1,9 @@
+<!ELEMENT  exam (student+)>
+<!ELEMENT student (name,location,grade)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT grade (#PCDATA)>
+<!ATTLIST student
+        id ID #REQUIRED
+        examID ID #REQUIRED>
+

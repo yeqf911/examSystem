@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?DOCTYPE exam SYSTEM "src/student_table"?>
+<exam>
+    <student examId="1" id="1">
+        <name>xiaoming</name>
+        <location>安徽</location>
+        <grade>89</grade>
+    </student>
+    <student examId="52131418" id="20131418">
+        <name>yeqianfeng</name>
+        <location>安徽</location>
+        <grade>91.0</grade>
+    </student>
+    <student examId="52131418" id="20131418">
+        <name>yeqianfeng</name>
+        <location>安徽</location>
+        <grade>91.0</grade>
+    </student>
+    <student examId="52131418" id="20131418">
+        <name>yeqianfeng</name>
+        <location>安徽</location>
+        <grade>91.0</grade>
+    </student>
+</exam>
