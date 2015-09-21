@@ -60,6 +60,11 @@ public class StudentDaoImpl implements StudentDao {
 
     }
 
+
+    /**
+     * @param name
+     * @throws StudentNotExistException 自定义的异常，用于处理找不到学生的情况
+     */
     @Override
     public void delete(String name) throws StudentNotExistException {
         try {
@@ -74,9 +79,16 @@ public class StudentDaoImpl implements StudentDao {
             }
             throw new StudentNotExistException("student " + name + " 不存在");
 
+            /**
+             * 这里要注意了，自定义的异常应先捕获，再抛出去，以便于跟Excption区分开来
+             */
         } catch (StudentNotExistException e) {
             throw e;
         } catch (Exception e) {
+            /**
+             * 此处是把Checked Exception(编译时异常)转化成Checked Exception(运行时异常)。
+             * 上层捕获到此异常可以自己选择处理或者不处理
+             */
             throw new RuntimeException(e);
         }
     }
